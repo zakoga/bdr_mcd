@@ -20,6 +20,7 @@ En el servicio de Ahorro, cuenta con:
 - Autorización de los depósitos realizados
 - Consulta de Saldos
 - Manejo de Polizas de depósito
+
 Organización de su infraestructura, cuenta con una cartera de clientes que estos se organizan en estructuras jerárquicas como Empresa, División, Planta o Sucursales y los empleados están contenidos dentro de las plantas o sucursales, los empleados en el sistema se requieren representar por un usuario con el cual puedan acceder y poder hacer sus aportaciones hacia sus ahorros, realizar algún pago de servicio o tiempo aire.
 
 Los Datos que se supone que se manejan son los siguientes:
@@ -38,7 +39,8 @@ Los Datos que se supone que se manejan son los siguientes:
 - Accesos
     - Id Acceso integer consecutivo
     - Nombre varchar(30)
-    - 
+    - URL varchar(100)
+    - esMenu bit(1)
 
 - PerfilUsuario
 

@@ -5,9 +5,9 @@ Un cliente tiene una empresa de servicios y requiere de una aplicación poder ad
 >Organización de su infraestructura
 
 Para la Administración de Usuarios, necesita:
-    -Registro de Usuarios, datos personales, username y contraseña
-    -Control de Accesos al sistema, menús, pantallas a las que puede tener acceso un usuario
-    -Forma de Recuperar una contraseña
+    - Registro de Usuarios, datos personales, username y contraseña
+    - Control de Accesos al sistema, menús, pantallas a las que puede tener acceso un usuario
+    - Forma de Recuperar una contraseña
 
 Para la gestión de los productos/servicios, lo primero es conocer los servicios que vende en estos encontramos:
     -Servicio de Ahorro en la aplicación para el tema de inversiones

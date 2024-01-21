@@ -18,10 +18,10 @@ En el servicio de Ahorro, cuenta con:
 - Depósito de dinero en las cuentas de ahorro
 - Cuenta Bancaria donde se hace el depósito del dinero a ahorrar
 - Autorización de los depósitos realizados
-- Consulta de Saldos
-- Manejo de Polizas de depósito
+- Consulta de Saldoss
+- Manejo de Polizas de depósitos
 
-Organización de su infraestructura, cuenta con una cartera de clientes que estos se organizan en estructuras jerárquicas como Empresa, División, Planta o Sucursales y los empleados están contenidos dentro de las plantas o sucursales, los empleados en el sistema se requieren representar por un usuario con el cual puedan acceder y poder hacer sus aportaciones hacia sus ahorros, realizar algún pago de servicio o tiempo aire.
+En la organización de su infraestructura cuenta con una cartera de clientes que estos se organizan en estructuras jerárquicas como Empresa, División, Planta o Sucursales y los empleados están contenidos dentro de las plantas o sucursales, los empleados en el sistema se requieren representar por un usuario con el cual puedan acceder y poder hacer sus aportaciones hacia sus ahorros, realizar algún pago de servicio o tiempo aire.
 
 Los Datos que se supone que se manejan son los siguientes:
 - Usuario
@@ -31,18 +31,47 @@ Los Datos que se supone que se manejan son los siguientes:
     - Apellido Materno varchar (30)
     - CURP varchar (20)
     - Correo Electrónico varchar(100)
-    - RFC varchar(13)
+    - RFC varchar(15)
     - Teléfono varchar(15)
     - Celular varchar(15)
     - UserName varchar(30)
     - Password varchar(15)
-- Accesos
+    - PasswordTemporal varchar(15)
+    - Id Elemento Estructura Empresa integer FK Elemento Estructura Empresa
+- Acceso
     - Id Acceso integer consecutivo
+    - Id Acceso integer FK Acceso
     - Nombre varchar(30)
     - URL varchar(100)
     - esMenu bit(1)
 
 - PerfilUsuario
+    - Id Perfil Usuario integer consecutivo
+    - Nombre varchar(30)
+
+- PerfilUsuarioAcceso
+    - Id Perfil Usuario Acceso integer consecutivo
+    - Id Perfil Usuario Integer FK PerfilUsuario
+    - Id Acceso Integer FK Acceso
+
+- UsuarioPerfilUsuario
+    - Id UsuarioPerfilUsuario integer
+    - Id Perfil Usuario integer FK PerfilUsuario
+    - Id Usuario integer FK Usuario
+
+Para la Organización de los clientes:
+- Cliente
+    - Id Cliente integer consecutivo
+    - Nombre varchar(30)
+    - RazonSocial varchar(30)
+    - Dirección varchar(100)
+    - RFC varchar(15)
+
+- Elemento Estructura Empresa
+    - Id Elemento Estructura Empresa integer consecutivo
+    - Nombre
+    - Tipo Elemento Estructura varchar(30) // empresa, planta, sucursal, division
+
 
 
 
@@ -60,6 +89,7 @@ Elegí MySQL por las siguientes razones:
 - Fácil instalar y no requiere de grandes capacidades, en el tema de servidores de aplicaciones, para correr el motor de BD.
 - Hay mucho soporte en la comunidad, debido a que es open source y tiene mucho tiempo en el mercado esto lo hace, a la par, muy segura.
 - Es compatible con la mayoría de los sistemas operativos, incluyendo ya versiones antiguas o descontinuadas, debido al tiempo que lleva en el mercado este producto.
+- Cuenta con módulos para el uso en el tema de ciencia de datos (MySQL HeatWave)
 
 https://aws.amazon.com/es/rds/aurora/
 https://es.wikipedia.org/wiki/Oracle_Corporation

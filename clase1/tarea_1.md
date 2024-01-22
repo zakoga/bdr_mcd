@@ -131,6 +131,7 @@ Elegí MySQL por las siguientes razones:
 - Es compatible con la mayoría de los sistemas operativos, incluyendo ya versiones antiguas o descontinuadas, debido al tiempo que lleva en el mercado este producto.
 - Cuenta con módulos para el uso en el tema de ciencia de datos, análisis de data warehouses y data lakes (MySQL HeatWave), MySQL Cluster CGE para la escalabilidad con temas de Cloud y servicios de comunicación para arquitecturas más complejas.
 
-https://www.mysql.com
-https://aws.amazon.com/es/rds/aurora/
-https://es.wikipedia.org/wiki/Oracle_Corporation
+Citas
+- https://www.mysql.com
+- https://aws.amazon.com/es/rds/aurora/
+- https://es.wikipedia.org/wiki/Oracle_Corporation

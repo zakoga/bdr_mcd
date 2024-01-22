@@ -18,7 +18,7 @@ En el servicio de Ahorro, cuenta con:
 - Depósito de dinero en las cuentas de ahorro
 - Cuenta Bancaria donde se hace el depósito del dinero a ahorrar
 - Autorización de los depósitos realizados
-- Consulta de Saldoss
+- Consulta de Saldos
 - Manejo de Polizas de depósitos
 
 En la organización de su infraestructura cuenta con una cartera de clientes que estos se organizan en estructuras jerárquicas como Empresa, División, Planta o Sucursales y los empleados están contenidos dentro de las plantas o sucursales, los empleados en el sistema se requieren representar por un usuario con el cual puedan acceder y poder hacer sus aportaciones hacia sus ahorros, realizar algún pago de servicio o tiempo aire.
@@ -72,9 +72,49 @@ Para la Organización de los clientes:
     - Nombre
     - Tipo Elemento Estructura varchar(30) // empresa, planta, sucursal, division
 
+- Ahorro
+    - Id Ahorro integer consecutivo
+    - Nombre varchar(30)
+    - Clave char(5)
 
+- Ahorrro Elemento Estructura Empresa    
+    - Id Ahorro Elemento Estructura Empresa integer consecutivo
+    - Id Elemento Estructura Empresa integer FK Elemento Estructura Empresa
+    - Id Ahorro integer FK Ahorro
 
+- Deposito Usuario
+    - Id Deposito Usuario integer 
+    - Id Tipo Movimiento Deposito integer FK Tipo Movimiento Deposito
+    - Origen Saldo varchar(20) // Deposito Banco o Saldo Ahorro
+    - Monto decimal (10,2)
+    - Id Ahorro integer FK Ahorro
+    - Folio varchar (30) //Codigo de barras del recibo, numero de celular, Folio de la ficha de deposito al banco
+    - Id Cuenta Bancaria integer FK Cuenta Bancaria
+    - Fecha datetime
+    - Estatus varchar(5)
 
+- Cuenta Bancaria
+    - Id Cuenta Bancaria integer consecutivo
+    - Numero Cuenta Bancaria integer
+    - Razon Social varchar (30)
+    - Banco varchar (30)
+
+- Poliza
+    - Id Poliza integer consecutivo
+    - Id Usuario FK integer
+    - Monto decimal(10,2)
+    - Fecha datetime
+
+- Movimiento Poliza
+    - Id Movimiento Poliza integer consecutivo
+    - Id Poliza integer FK Poliza
+    - Cuenta Contable varchar(50)
+    - Monto decimal(10,2)
+
+- Tipo Movimiento Deposito
+    - Id Tipo Movimiento Deposito integer consecutivo
+    - Clave char (5)
+    - Nombre varchar(30) //Deposito Ahorro, Pago Tiempo Aire, Pago de Servicio Agua, Pago Servicio Luz, Pago Servicio Gas
 
 
 
@@ -89,7 +129,8 @@ Elegí MySQL por las siguientes razones:
 - Fácil instalar y no requiere de grandes capacidades, en el tema de servidores de aplicaciones, para correr el motor de BD.
 - Hay mucho soporte en la comunidad, debido a que es open source y tiene mucho tiempo en el mercado esto lo hace, a la par, muy segura.
 - Es compatible con la mayoría de los sistemas operativos, incluyendo ya versiones antiguas o descontinuadas, debido al tiempo que lleva en el mercado este producto.
-- Cuenta con módulos para el uso en el tema de ciencia de datos (MySQL HeatWave)
+- Cuenta con módulos para el uso en el tema de ciencia de datos, análisis de data warehouses y data lakes (MySQL HeatWave), MySQL Cluster CGE para la escalabilidad con temas de Cloud y servicios de comunicación para arquitecturas más complejas.
 
+https://www.mysql.com
 https://aws.amazon.com/es/rds/aurora/
 https://es.wikipedia.org/wiki/Oracle_Corporation

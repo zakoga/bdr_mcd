@@ -2,3 +2,5 @@
 
 ![Modelo Relacional](/imagenes/modelo_relacional.png)
 ![Diagrama Entidad-Relacion](/imagenes/DER_tarea3.png)
+
+### Algebra Relacional

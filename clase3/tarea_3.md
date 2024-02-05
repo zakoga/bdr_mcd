@@ -6,7 +6,7 @@
 ![Diagrama Entidad-Relacion](/imagenes/DER_tarea3.png)
 
 ### Algebra Relacional
-##### ***Obtener los Accesos que tiene asignado el Usuario según su Perfil***
+#### ***Obtener los Accesos que tiene asignado el Usuario según su Perfil***
 ***π*** u . idusuario, upu . idperfilusuario, pua . idacceso
  (***ρ*** usuario ***⋈*** u . idusuario = upu . idusuario
   ***ρ*** usuarioperfilusuario ***⋈*** upu . idperfilusuario = pua . idperfilusuario

@@ -1,3 +1,3 @@
 # archivo nuevo
 
-![Modelo Relacional](/imagenes/modelo_relacional.png)
+![Modelo Relacional](/imagenes/DER_tarea3.png)

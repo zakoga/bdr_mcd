@@ -1,6 +1,6 @@
-DROP SCHEMA IF EXISTS `mcd_sistema_2`;
-CREATE DATABASE  IF NOT EXISTS `mcd_sistema_2`;
-USE `mcd_sistema_2`;
+DROP SCHEMA IF EXISTS `mcd_sistema`;
+CREATE DATABASE  IF NOT EXISTS `mcd_sistema`;
+USE `mcd_sistema`;
 DROP TABLE IF EXISTS `Acceso`;
 
 CREATE TABLE `Acceso` (

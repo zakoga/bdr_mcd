@@ -6,3 +6,4 @@ A continuación aparecen los vínculos de las Tareas:
 * [Tarea 2](clase2/tarea_2.md)
 * [Tarea 3](clase3/tarea_3.md)
 * [Tarea 4](clase4/tarea_4.sql)
+* [Tarea 5](clase5/carga_informacion_bd_mcd.sql)
